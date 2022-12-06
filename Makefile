@@ -1,6 +1,6 @@
 run: part1 part2
-	cat part1.txt | ./part1 
-	cat part2.txt | ./part2 
+	cat input.txt | ./part1 
+	cat input.txt | ./part2 
 
 .PHONY: run
 
