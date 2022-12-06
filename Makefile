@@ -1,15 +1,7 @@
-run: run-part1 run-part2
 
-.PHONY: run
+.PHONY: all day1
 
-run-part1: part1
-	cat input.txt | ./part1 
+all: run-day1 run-day2 run-day3
 
-run-part2: part2
-	cat input.txt | ./part2
-
-part1: part1.cpp
-	$(CXX) part1.cpp -std=c++20 -o part1
-
-part2: part2.cpp
-	$(CXX) part2.cpp -std=c++20 -o part2
+run-day%: day%
+	$(MAKE) -C $<
